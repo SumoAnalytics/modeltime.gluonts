@@ -94,8 +94,10 @@ check_gluonts_dependencies <- function() {
         dependencies_ok <- all(
             reticulate::py_module_available("numpy"),
             reticulate::py_module_available("pandas"),
-            reticulate::py_module_available("gluonts"),
-            reticulate::py_module_available("mxnet"),
+            reticulate::py_module_available("torch"),
+            reticulate::py_module_available("pytorch_lightning"),
+            # reticulate::py_module_available("gluonts"),
+            # reticulate::py_module_available("mxnet"),
             reticulate::py_module_available("pathlib")
         )
     }, silent = TRUE)

@@ -73,8 +73,8 @@ install_gluonts <- function(
     message("\n")
 
     default_pkgs <- c(
-        "mxnet~=1.7",
-        "gluonts==0.8.0",
+        "torch~=1.6",
+        "pytorch-lightning~=1.1",
         "numpy",
         "pandas==1.0.5",
         "pathlib==1.0.1",
@@ -94,27 +94,27 @@ install_gluonts <- function(
 
 
     # TORCH INSTALLATION
-    if (include_pytorch) {
-
-        message("\n")
-        cli::cli_alert_info("Installing torch dependencies...")
-        message("\n")
-
-        torch_pkgs <- c(
-            "torch~=1.6",
-            "pytorch-lightning~=1.1"
-        )
-
-        reticulate::py_install(
-            packages       = torch_pkgs,
-            envname        = "r-gluonts",
-            method         = "conda",
-            conda          = "auto",
-            python_version = "3.7.1",
-            pip            = TRUE
-        )
-
-    }
+    # if (include_pytorch) {
+    #
+    #     message("\n")
+    #     cli::cli_alert_info("Installing torch dependencies...")
+    #     message("\n")
+    #
+    #     torch_pkgs <- c(
+    #         "torch~=1.6",
+    #         "pytorch-lightning~=1.1"
+    #     )
+    #
+    #     reticulate::py_install(
+    #         packages       = torch_pkgs,
+    #         envname        = "r-gluonts",
+    #         method         = "conda",
+    #         conda          = "auto",
+    #         python_version = "3.7.1",
+    #         pip            = TRUE
+    #     )
+    #
+    # }
 
     # PROCESS CHECKS
     env_exists      <- !is.null(detect_default_gluonts_env())

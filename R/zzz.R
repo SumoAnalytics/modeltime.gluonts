@@ -38,7 +38,7 @@ pkg.env$activated  <- FALSE
 # PYTHON DEPENDENCIES ----
 # Move Python Imports to Package Environment
 # - CRAN comment: Cannot use <<- to modify Global env
-pkg.env$gluonts    <- NULL
+#pkg.env$gluonts    <- NULL
 pkg.env$pathlib    <- NULL
 pkg.env$pd         <- NULL
 pkg.env$np         <- NULL
@@ -57,7 +57,7 @@ pkg.env$np         <- NULL
 
         try({
 
-            pkg.env$gluonts <- reticulate::import("gluonts", delay_load = TRUE, convert = FALSE)
+            #pkg.env$gluonts <- reticulate::import("gluonts", delay_load = TRUE, convert = FALSE)
             pkg.env$pathlib <- reticulate::import("pathlib", delay_load = TRUE, convert = FALSE)
             pkg.env$np      <- reticulate::import("numpy", delay_load = TRUE, convert = FALSE)
             pkg.env$pd      <- reticulate::import("pandas", delay_load = TRUE, convert = FALSE)
