@@ -64,7 +64,8 @@ install_gluonts <- function(
 
 
     # PYTHON SPEC
-    python_version <- "3.7.1"
+    # python_version <- "3.7.1"
+    python_version <- "3.11"
 
     # GLUONTS INSTALLATION
 
