@@ -72,16 +72,24 @@ install_gluonts <- function(
     cli::cli_alert_info("Installing gluonts dependencies...")
     message("\n")
 
-    default_pkgs <- c(
-        "torch~=1.6",
-        "pytorch-lightning~=1.1",
-        "numpy",
-        "pandas==1.0.5",
-        "pathlib==1.0.1",
-        "ujson==4.0.2",
-        "brotlipy"
-    )
+    # default_pkgs <- c(
+    #     "torch~=1.6",
+    #     "pytorch-lightning~=1.1",
+    #     "numpy",
+    #     "pandas==1.0.5",
+    #     "pathlib==1.0.1",
+    #     "ujson==4.0.2",
+    #     "brotlipy"
+    # )
 
+    default_pkgs <- c(
+        "torch==1.10.0", # Specify the exact version known to be compatible with Python 3.11.
+        "pytorch-lightning==1.5.0", # Use an exact version for stability.
+        "numpy==1.22.0", # Lock to a specific version compatible with Python 3.11.
+        "pandas==1.3.0", # Use an exact version to avoid unexpected updates.
+        "ujson==4.0.2", # Lock to a specific version.
+        "brotlicffi==1.0.9" # Use an exact version for the brotlipy replacement.
+    )
 
     reticulate::py_install(
         packages       = default_pkgs,
