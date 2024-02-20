@@ -84,11 +84,11 @@ install_gluonts <- function(
     # )
 
     default_pkgs <- c(
-        "torch==1.10.0", # Specify the exact version known to be compatible with Python 3.11.
-        "pytorch-lightning==1.5.0", # Use an exact version for stability.
-        "numpy==1.22.0", # Lock to a specific version compatible with Python 3.11.
-        "pandas==1.3.0", # Use an exact version to avoid unexpected updates.
-        "ujson==4.0.2", # Lock to a specific version.
+        "torch==2.2", # Specify the exact version known to be compatible with Python 3.11.
+        "pytorch-lightning==2.2.0.post0", # Use an exact version for stability.
+        "numpy==1.26.0", # Lock to a specific version compatible with Python 3.11.
+        "pandas==2.2.0", # Use an exact version to avoid unexpected updates.
+        "ujson==5.9.0", # Lock to a specific version.
         "brotlicffi==1.0.9" # Use an exact version for the brotlipy replacement.
     )
 
